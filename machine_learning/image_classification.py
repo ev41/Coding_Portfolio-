@@ -7,7 +7,7 @@ from tensorflow import keras
 
 
 
-# import the CIFAR-10 dataset
+#import the CIFAR-10 dataset
 (X_train, y_train), (X_test, y_test) = keras.datasets.cifar10.load_data()
 
 # Normalize the data
