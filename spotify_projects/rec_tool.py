@@ -1,3 +1,9 @@
+#This is no longer the file I use to run this spotify algorithm. I am currently building off of rec_tool2.py
+#In this file I was using an inefficient way of gather seed song data. I was trying to comb through large playlists rather than just inputting the seed
+#song information manually. Yes, it's manual, which defeats some purpose of coding, but it's so much faster from a performance standpoint. 
+
+
+
 import os
 import json
 import pandas
