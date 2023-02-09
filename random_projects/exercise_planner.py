@@ -1,6 +1,7 @@
 #READ ME:
 """
-This is a work in progress. So far, each week in the schedule is the same, in other words, it isn't rotating the way I want it to.
+This is an exercise schedule generator, and is also a work in progress. So far, each week in the schedule is the same, in other words, 
+    it isn't rotating the way I want it to.
 Additionally, I need to find a way to show the output as a multi-dimensional (insert more appropriate description) dataframe that 
 displays both the muscle groups being worked in any given week, as well as the corresponding exercises & rep ranges. 
 
