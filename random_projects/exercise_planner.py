@@ -8,6 +8,23 @@ displays both the muscle groups being worked in any given week, as well as the c
 Tips to self: Do more digging into dataframes, as well as how iterate dictionary lists / shift the order of elements for each iteration.
 """
 
+
+
+"""
+The code below creates a workout plan and saves it to a pickle file. 
+The plan consists of a nested dictionary that maps muscle groups to their corresponding exercises and reps. 
+The plan is then assigned to days of the week in the order specified. 
+The workout plan is saved using the save_obj function, which takes an object and a name and saves the object as a pickle file. 
+The load_obj function is used to load the workout plan from the pickle file.
+
+Finally, the code allows the user to see the workout schedule for a specified week by 
+loading the schedule from the pickle file and printing the corresponding day and workout for that week.
+"""
+
+
+
+
+
 import pandas as pd
 import random
 import pickle
