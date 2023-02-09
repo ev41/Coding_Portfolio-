@@ -104,19 +104,3 @@ print(json_response)
 
 
 
-
-
-
-
-
-
-
-# #creating the csv
-# header = ['artist', 'song_name', 'release_date', 'popularity']
-
-# with open('song_info', 'w', newline='') as f:
-#     writer = csv.writer(f)
-
-#     writer.writerow(header)
-#     writer.writerows(relevant_song_info)
-
