@@ -1,4 +1,4 @@
-# Import required libraries
+#Import required libraries
 #We're using the tensorflow library which allows us to build and train our machine learning model
 #importing the tensorflow datasets library allows us to load datasets from their public collection
 
