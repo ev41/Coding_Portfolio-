@@ -64,9 +64,9 @@ print("Cross-Validation Score:", cv_score)
 
 
 
-"""
-INTERPRETING THE RESULTS OF THIS MODEL:
+#INTERPRETING THE RESULTS OF THIS MODEL:
 
+"""
 The Mean Squared Error (MSE) is a measure of the average difference between the predicted values and the true values. 
 In this case, the MSE of 0.17 indicates that the average difference between the predicted and true values is about 0.17. 
 A lower MSE value is generally better, as it indicates that the model is making accurate predictions. 
@@ -87,4 +87,18 @@ This score is similar to the R-squared value, and suggests that the model is not
 Overall, these results suggest that the linear regression model is not making accurate predictions *insert sad face* and 
 that the features in the data may not be strong predictors of the target variable. 
 Improving the model's performance may require additional feature adjustments or a different ML algorithm altogether.
+"""
+
+
+#OTHER INSIGHTS / COMMENTS:
+"""
+Evidently, the capitalization of X and lowercase y is a common convention in machine learning and reflects
+the mathematical notation for input variables and output variables. 
+In a machine learning problem, the input variables are often represented by a matrix X (with one row for each sample and one column for each feature), 
+while the output variable is a vector y (with one entry for each sample).
+
+So, in the code, X_train represents the training data for the input variables, while y_train represents the corresponding 
+training data for the target variable. During model training, the algorithm uses the X_train and y_train arrays to 
+learn the relationships between the input variables and the target variable, and these learned relationships are then used to 
+make predictions on new, unseen data
 """
