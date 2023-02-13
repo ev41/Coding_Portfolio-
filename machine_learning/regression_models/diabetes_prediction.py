@@ -5,6 +5,8 @@ from sklearn.linear_model import Ridge
 from sklearn.metrics import mean_squared_error, r2_score
 
 
+
+#this will print out a helpful error message, based on the (not so few) error messages I encountered while implementing this code.
 try:
     # Loading the data into a pandas df
     data = pd.read_csv("diabetes.csv")
@@ -32,13 +34,13 @@ cv_scores = []
 # Define a range of alpha values to test
 alphas = np.logspace(-5, 5, 50)
 
-# Loop over each alpha value and evaluate the performance using cross-validation
+# Loop over each alpha value and evaluate the performance using the cross-validation function
 for val in alphas:
     reg = Ridge(alpha=val)
     scores = cross_val_score(reg, X_train, y_train, cv=5)
     cv_scores.append(np.mean(scores))
 
-# Find the best alpha value
+# Finding the best alpha value so we may avoid an overfitting issue
 best_alpha = alphas[np.argmax(cv_scores)]
 
 # Train the final model with the best alpha value
@@ -59,3 +61,30 @@ print("R-squared:", r2)
 # Evaluate the performance of the model using cross-validation
 cv_score = np.mean(cross_val_score(reg, X, y, cv=5))
 print("Cross-Validation Score:", cv_score)
+
+
+
+"""
+INTERPRETING THE RESULTS OF THIS MODEL:
+
+The Mean Squared Error (MSE) is a measure of the average difference between the predicted values and the true values. 
+In this case, the MSE of 0.17 indicates that the average difference between the predicted and true values is about 0.17. 
+A lower MSE value is generally better, as it indicates that the model is making accurate predictions. 
+
+
+The R-squared value is a measure of how well the regression line fits the data. 
+It takes values between 0 and 1, where a higher value indicates a better fit. 
+In our case, the R-squared value of 0.25 indicates that the model explains about 25% of the variance in the target variable. 
+This is relatively low, and might indicate that the features in the data are not strong predictors of the target variable.
+
+
+The cross-validation score represents the average performance of the model on the different folds of the data used in cross-validation. 
+In this case, the cross-validation score of 0.27 indicates that, on average, the model is able to explain about 27% of the variance in 
+the target variable. 
+This score is similar to the R-squared value, and suggests that the model is not performing well in terms of explaining the target variable.
+
+
+Overall, these results suggest that the linear regression model is not making accurate predictions *insert sad face* and 
+that the features in the data may not be strong predictors of the target variable. 
+Improving the model's performance may require additional feature adjustments or a different ML algorithm altogether.
+"""
