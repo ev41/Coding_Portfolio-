@@ -31,12 +31,17 @@ X_train, X_test, y_train, y_test = train_test_split(
 # Initialize a list to store the cross-validation scores
 cv_scores = []
 
-# Define a range of alpha values to test
+# Define a range of alpha values to test. The np.logspace function is useful in machine learning for defining a range of hyperparameter values to test, 
+# as it allows you to explore a wide range of values that span several orders of magnitude, without having to manually specify a large number of values.
+# I confess, I copy and pasted this function from stackoverflow. 
 alphas = np.logspace(-5, 5, 50)
 
 # Loop over each alpha value and evaluate the performance using the cross-validation function
 for val in alphas:
     reg = Ridge(alpha=val)
+    # The cross_val_score function divides the training data into cv folds and trains the model cv times, 
+    # each time using a different fold as the validation set and the remaining folds as the training set. 
+    # The function then returns an array of cv scores, one for each fold, which represent the performance of the model on the validation set
     scores = cross_val_score(reg, X_train, y_train, cv=5)
     cv_scores.append(np.mean(scores))
 
@@ -100,5 +105,6 @@ while the output variable is a vector y (with one entry for each sample).
 So, in the code, X_train represents the training data for the input variables, while y_train represents the corresponding 
 training data for the target variable. During model training, the algorithm uses the X_train and y_train arrays to 
 learn the relationships between the input variables and the target variable, and these learned relationships are then used to 
-make predictions on new, unseen data
+make predictions on new, unseen data.
+
 """
