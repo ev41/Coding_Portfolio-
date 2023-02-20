@@ -49,7 +49,7 @@ def preprocess(image, label):
   
 #Alrighty. Here we're implementing the map() method to apply the preprocess()
     #function to the training and testing datasets. The batch() method is used to create
-    #batches of data, which is just a way to make processing efficient. 
+    #batches of data, which is just a way to make processing efficient. Stackoverflow helped quite a bit here.
 train_dataset = train_dataset.map(preprocess).batch(32)
 test_dataset = test_dataset.map(preprocess).batch(32)
 
@@ -60,7 +60,7 @@ test_dataset = test_dataset.map(preprocess).batch(32)
 
 # Build the model
 #The Sequential model is from the Keras library. This model consists of three layers:
-    # a Flatten layer (flattens iput data into a 1-dimensional array
+    # a Flatten layer flattens iput data into a 1-dimensional array
     # a Dense (fully connected) later with 128 units
     # and another Dense layer with 10 units
     #Truthfully, a lot of this Keras stuff is kinda hazey for me, so I just followed the necessary
