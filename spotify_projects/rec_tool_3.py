@@ -1,6 +1,6 @@
 #These are the libraries you need to import in order to run this code. 'os' is for finding 
     #secret local variables that I don't want you know. Spotipy is the library I use for functions
-    #in this code. the oauth library is for accessing spotify's API. 
+    #in this code. The oauth library is for accessing spotify's API. 
 import os
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
