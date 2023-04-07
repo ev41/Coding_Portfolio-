@@ -6,6 +6,8 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
 
+
+
 # Set up authentication flow so I can access spotify's API.
 sp = spotipy.Spotify(
     auth_manager=SpotifyOAuth(
@@ -16,9 +18,13 @@ sp = spotipy.Spotify(
     )
 )
 
+
+
 # Ask user for a song and artist
 song_name = input("Enter the name of a song: ")
 artist_name = input("Enter the name of the artist: ")
+
+
 
 # Search for the track ID for the user's selected song.
 #search handles case insensitivity, so you don't have to use capital letters. 
@@ -32,10 +38,14 @@ else:
     print(f"No results found for {song_name} by {artist_name}")
     exit()
 
+    
+    
 # Get a list of recommended tracks based on the user-provided seed track.
 recs = sp.recommendations(seed_tracks=[seed_track_id])
 
-# Create a new playlist and add the top recommended track to it.
+
+
+# Create a new playlist and add n-number of recommended tracks to it.
 #You can edit how many songs in the playlist you want under the track_ids variable. Where you see
     #20, just change the number to whatever you want.
 user_id = sp.me()['id']
