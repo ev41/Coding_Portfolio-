@@ -1,0 +1,2 @@
+Here is a spotify song recommendation tool I created. This project accesses the public spotify API and uses API functions to 
+create a playlist bases on any song provided by the user interacting with the algorithm. 
