@@ -1,2 +1,4 @@
 Here is a spotify song recommendation tool I created. This project accesses the public spotify API and uses API functions to 
-create a playlist bases on any song provided by the user interacting with the algorithm. 
+create a playlist bases on any song provided by the user interacting with the algorithm.
+
+rec_tool2.py is the most recent ~functioning~ version. rec_tool3.py is an incomplete attempt to optimize the previous iteration.  
